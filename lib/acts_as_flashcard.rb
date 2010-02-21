@@ -132,22 +132,17 @@ module ActiveRecord
               current_interval = 0
             end
             current_delay = 0
-            puts "current_interval(delay < 0) : #{current_interval}"
           end
           if ease == 1
             current_interval *= DELAY
             current_interval = 0 if current_interval < HARD_INTERVAL_MIN
-            puts "current_interval(ease == 1) : #{current_interval}"
           elsif current_interval == 0
             case ease
               when 2 then current_interval = rand(HARD_INTERVAL_MAX - HARD_INTERVAL_MIN) + HARD_INTERVAL_MIN
               when 3 then current_interval = rand(MID_INTERVAL_MAX - MID_INTERVAL_MIN) + MID_INTERVAL_MIN
               when 4 then current_interval = rand(EASY_INTERVAL_MAX - EASY_INTERVAL_MIN) + EASY_INTERVAL_MIN
             end
-            puts "current_interval : #{current_interval}"
           else
-            puts "faling in the else clause : #{current_interval}"
-            puts "#{current_interval} < #{HARD_INTERVAL_MAX} > 0.166"
             if current_interval < HARD_INTERVAL_MAX && current_interval > 0.166
               mid = MID_INTERVAL_MIN + MID_INTERVAL_MAX / 2
               current_interval *= (mid / current_interval / self.factor)

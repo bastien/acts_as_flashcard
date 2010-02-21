@@ -1,0 +1,5 @@
+Description:
+ Adds a migration file for the flashcard model
+ 
+Usage:
+  script/generate flashcard FLASHCARDMODEL

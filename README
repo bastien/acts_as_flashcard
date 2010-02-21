@@ -1,13 +1,17 @@
 ActsAsFlashcard
 ===============
 
-Introduction goes here.
+ActsAsFlashcard is an adaptation of the Anki (http://ichi2.net/anki/) algorithm for ruby on rails application.
 
 
 Example
 =======
 
-Example goes here.
+class Card < ActiveRecord::Base
+  acts_as_flashcard :scope => :user_id
+end
 
+card = Card.create
+card.answered!(4)
 
-Copyright (c) 2010 [name of plugin creator], released under the MIT license
+Copyright (c) 2010 Bastien Vaucher, released under the GNU GPL, version 3 or later

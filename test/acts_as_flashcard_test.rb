@@ -115,8 +115,9 @@ class ActsAsFlashcardTest < Test::Unit::TestCase
   def test_increase_interval_when_right
     card = Flashcard.create()
     card.answered!(2)
-    card.answered!(4)
+    card.answered!(2)
     interval_before = card.interval
+    card.answered!(4)
     card.answered!(4)
     assert card.interval > interval_before, true
   end

@@ -13,7 +13,8 @@ class FlashcardGenerator < Rails::Generators::NamedBase
   end
   
   def install_flashcards
-    if File.exists?("db/schema.rb") && File.read("db/schema.rb") =~ /create_table \"#{table_name}\"/
+    if File.exists?("#{destination_root}/db/schema.rb") && 
+       File.read("#{destination_root}/db/schema.rb") =~ /create_table \"#{table_name}\"/
       migration_template("add_flashcards_fields_migration.rb","db/migrate/add_flashcards_fields.rb")
     else
       migration_template("create_flashcards_migration.rb","db/migrate/create_flashcards.rb")

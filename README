@@ -3,6 +3,11 @@ ActsAsFlashcard
 
 ActsAsFlashcard is an adaptation of the Anki ( http://ichi2.net/anki/ ) algorithm for ruby on rails application.
 
+Requirements
+============
+
+Rails3 (for Rails2 version please check the corresponding branches)
+Has been tested with ruby 1.9.1
 
 Example
 =======

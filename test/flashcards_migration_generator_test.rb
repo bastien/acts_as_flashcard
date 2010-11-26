@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + '/test_helper.rb'
-require 'rails/generators'
+#require 'rails/generators'
 require 'generators/flashcard/flashcard_generator'
 
 class MigrationGeneratorTest < Test::Unit::TestCase
@@ -36,7 +36,7 @@ class MigrationGeneratorTest < Test::Unit::TestCase
   end
   
   def create_schema_file
-    Dir.mkdir(@destination)
+    FileUtils.mkdir_p(@destination)
     Dir.mkdir(File.join(@destination, "db"))
     File.open(File.join(@destination, "db", "schema.rb"), 'w') do |f|
       f.write("ActiveRecord::Schema.define(:version => 20100201214414) do\n")

@@ -11,6 +11,7 @@ class <%= @migration_class_name %> < ActiveRecord::Migration
       t.column :last_interval,:float,   :default => 0
       t.column :due,          :datetime
       t.column :combined_due, :integer, :default => 0
+    end
   end
 
   def self.down

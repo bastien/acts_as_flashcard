@@ -54,6 +54,7 @@ module Flashcard                         #:nodoc:
           include Flashcard::Base::InstanceMethods
           
           def acts_as_flashcard_class
+            puts "::#{self.name}"
             ::#{self.name}
           end
           

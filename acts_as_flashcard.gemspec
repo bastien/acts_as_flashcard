@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{acts_as_flashcard}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Bastien Vaucher"]
-  s.date = %q{2010-11-26}
+  s.date = %q{2011-01-15}
   s.description = %q{act_as_flashcard is an adaptation of the Anki space repetition algorithm for rails applications}
   s.email = %q{bastien.vaucher@gmail.com}
   s.extra_rdoc_files = [
@@ -22,17 +22,14 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "acts_as_flashcard.gemspec",
-    "install.rb",
     "lib/acts_as_flashcard.rb",
     "lib/generators/flashcard/USAGE",
     "lib/generators/flashcard/flashcard_generator.rb",
     "lib/generators/flashcard/templates/add_flashcards_fields_migration.rb",
     "lib/generators/flashcard/templates/create_flashcards_migration.rb",
-    "tasks/acts_as_flashcard_tasks.rake",
     "test/acts_as_flashcard_test.rb",
     "test/flashcards_migration_generator_test.rb",
-    "test/test_helper.rb",
-    "uninstall.rb"
+    "test/test_helper.rb"
   ]
   s.homepage = %q{http://github.com/bastien/acts_as_flashcard}
   s.licenses = ["GNU"]
